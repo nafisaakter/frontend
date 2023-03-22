@@ -43,7 +43,7 @@ class Todos {
             .then(response => response.json())
             .then ((response) => {
                 resolve(this.#addToArray(response.id, text))
-            }), (error) => {
+            }), (error:any) => {
                 reject(error)
             }
         })
@@ -63,7 +63,7 @@ class Todos {
                 .then(response => response.json())
             .then ((response) => {
                 resolve(this.#removeFromArray(response.id))
-            }), (error) => {
+            }), (error:any) => {
                 reject(error)
             }
         })
